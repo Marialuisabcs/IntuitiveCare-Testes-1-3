@@ -6,10 +6,9 @@ from urllib.request import *
 import os
 from pathlib import Path
 import shutil
-from PyPDF2 import PdfMerger
 
 
-class Scrapper:
+class Scraper:
     def __init__(self, path: Path, root_url: str, files_to_download: list):
         self.path = path
         self.root_url = root_url
