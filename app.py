@@ -1,17 +1,17 @@
-from scrapper import *
+from scraper import *
 import os
 from pathlib import Path
 
-from scrapper.main import Scrapper
+from scraper.web_scraper import Scraper
 
 
-def main():
+def web_scraping():
     root_url = 'https://www.gov.br/ans/pt-br/assuntos/consumidor/o-que-o-seu-plano-de-saude-deve-cobrir-1/o-que-e-o-rol-de-procedimentos-e-evento-em-saude'
     files_to_download = ['Anexo I', 'Anexo II', 'Anexo III', 'Anexo IV']
 
     root_path = Path.cwd()
 
-    scpr = Scrapper(root_path, root_url, files_to_download)
+    scpr = Scraper(root_path, root_url, files_to_download)
 
     links = scpr.get_urls_from_page()
     pdfs = scpr.get_only_pdf(links)
@@ -25,4 +25,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    web_scraping()
