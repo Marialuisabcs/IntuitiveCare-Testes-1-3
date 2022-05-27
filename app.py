@@ -7,6 +7,9 @@ root_path = Path.cwd()
 
 
 def web_scraping():
+    """
+    Instantiates web scraper object and retrieve data from url.
+    """
     root_url = 'https://www.gov.br/ans/pt-br/assuntos/consumidor/o-que-o-seu-plano-de-saude-deve-cobrir-1/o-que-e-o-rol-de-procedimentos-e-evento-em-saude'
     files_to_download = ['Anexo I', 'Anexo II', 'Anexo III', 'Anexo IV']
     zip_save_path_and_name = str(root_path / 'anexos')
@@ -31,6 +34,9 @@ def web_scraping():
 
 
 def data_scrapig():
+    """
+    Instantiates data scraper object and retrieve structured data from pdf file
+    """
     pdf_path = root_path / 'anexos' / 'Anexo_I_Rol_2021RN_465.2021_RN473_RN478_RN480_RN513_RN536.pdf'
     csv_path = root_path / 'Teste_{MariaLuisaBCSilva}.csv'
     zip_save_path_and_name = str(root_path / 'Teste_{MariaLuisaBCSilva}')
