@@ -5,7 +5,6 @@ from urllib.parse import *
 from urllib.request import *
 import os
 from pathlib import Path
-import shutil
 
 
 class Scraper:
@@ -63,8 +62,3 @@ class Scraper:
                     a_hrefs.append(inner_url)
 
         return a_hrefs
-
-    def zip_file(self, output_file_name: str):
-        path = self.path / 'anexos'
-        zip_file_name = shutil.make_archive(base_name=output_file_name, base_dir=path, format='zip')
-        print(f'{zip_file_name} zipped')
