@@ -1,38 +1,44 @@
-import os
-
+from pathlib import Path
 import pandas as pd
 import tabula
+from pandas import DataFrame
+
+from scraper import *
 
 
 class Data_Scraper:
-    def __init__(self, root_path: str, pdf: str, csv: str):
+    def __init__(self, root_path: Path, pdf: Path, csv: Path, df: DataFrame = None):
         self.root_path = root_path
         self.pdf = pdf
         self.csv = csv
-
-    def pdf_table_to_csv(self):
-        tabula.convert_into(self.pdf, output_path=self.csv, output_format='csv', pages="all")
+        self.df = df
 
     def read_pdf(self):
-        df = tabula.read_pdf(self.pdf, pages='all', multiple_tables=True,  encoding="utf-8", lattice=True)
-        return df
+        print(f'{YELLOW}[...]Reading')
+        df = tabula.read_pdf(self.pdf, pages='all', multiple_tables=True, encoding="utf-8", lattice=True)
 
+        print(f'{YELLOW}[...]Merging data frames')
+        df_concat = pd.concat(df)
 
-if __name__ == '__main__':
-    os.chdir('../')
-    root_path = os.getcwd()
-    pdf_path = root_path + '\\anexos\Anexo_I_Rol_2021RN_465.2021_RN473_RN478_RN480_RN513_RN536.pdf'
-    # pdf_path = root_path + '\\anexos\\apagar.pdf'
-    csv_path = root_path + '\\Teste_{MariaLuísa}.csv'
+        print(f'{YELLOW}[...]Dropping empty columns')
+        df_concat = df_concat.dropna(axis=1, how='all')
 
-    ds = Data_Scraper(root_path, pdf_path, csv_path)
-    df_results = ds.read_pdf()
-    print(df_results)
-    # i = 1
-    # for df in df_results:
-    #     print(f'DATAFRAME NUM {i}')
-    #     print(df.info())
-    #     i += 1
-    # single_df = pd.concat(df_results, axis=0)
-    # print(single_df.info())
+        self.df = df_concat
 
+        print(f'{GREEN}[!]Done')
+        return df_concat
+
+    def change_to_real_value(self, column_name: str, abbrev: str, real_value: str):
+        if column_name not in self.df.columns:
+            print(f'{RED}[!!]The column {column_name} does not exists')
+            return
+
+        print(f'{YELLOW}[...]Replacing values')
+        self.df[column_name] = self.df[column_name].replace({abbrev: real_value})
+
+        print(f'{GREEN}[!]Values successfuly changed!')
+        return self.df
+
+    def df_to_csv(self):
+        self.df.to_csv(path_or_buf=self.csv)
+        print(f'{GREEN}[!]Csv file saved')
