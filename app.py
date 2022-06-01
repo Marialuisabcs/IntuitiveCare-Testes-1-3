@@ -5,7 +5,6 @@ from scraper.web_scraper import Scraper
 
 root_path = Path.cwd()
 
-
 def web_scraping():
     """
     Instantiates web scraper object and retrieve data from url.
@@ -57,5 +56,8 @@ def data_scrapig():
 
 
 if __name__ == '__main__':
+    print(f'{BLUE}Teste 01 - ')
     web_scraping()
+
+    print(f'{BLUE}Teste 02 - ')
     data_scrapig()
