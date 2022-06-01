@@ -1,10 +1,17 @@
 # IntuitiveCare - Processo seletivo
-###Maria Luísa Barros C. Silva
-Esse repositório tem por objetivo hospedar o código que que da a solução aos 
-problemas referentes os testes 1 e 2.
 
-Todas as ações necessárias para que seja possível solucionar o que foi pedido
-está em app.py.
+### Maria Luísa Barros C. Silva
+
+Esse repositório tem por objetivo hospedar o código que que da a solução aos 
+problemas referentes os testes:
+- Teste 1 - WebScraping
+- Teste 2 Transformação de dados 
+- Teste 3 - Banco de dados
+
+(O **Teste 4 - API** está hospedado nesse [repositório](link) )
+
+Todas as ações necessárias para que seja possível solucionar o que foi pedido em (Teste 1 e 2)
+está em app.py o resultado do Teste 3 está neste [aquivo](https://github.com/Marialuisabcs/IntuitiveCare-Testes-1-3/blob/main/Teste3_Banco_%7BMariaLuisaBCSilva%7D.sql).
 
 Para que seja possível executar o código siga os seguintes passos:
 
@@ -21,7 +28,7 @@ raiz do projeto e execute o comando:
    ```
    pip install -r requirements.txt
    ```
-   **obs**:É altamente indicado a utilização de um ambiente virtual 
+   **obs**: É altamente indicado a utilização de um ambiente virtual 
    para a execução do script
    
 3. Com todas as dependências corretamente instaladas podemos então realizar
@@ -29,3 +36,19 @@ a execução do código, para isto basta inserir no cmd o comando:
    ```
    python app.py
    ```
+
+---
+## Tecnologias utilizadas
+
+| Tecnologia | Versão |
+| ----------- | ----------- |
+| Python | 3.9 |
+| PostgreSQL | 14 |
+
+
+
+
+
+
+
+
