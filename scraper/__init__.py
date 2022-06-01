@@ -8,6 +8,7 @@ GREEN = colorama.Fore.GREEN
 YELLOW = colorama.Fore.YELLOW
 RED = colorama.Fore.RED
 CYAN = colorama.Fore.CYAN
+BLUE = colorama.Fore.BLUE
 
 
 def zip_file(output_file_name: str, path: str):
