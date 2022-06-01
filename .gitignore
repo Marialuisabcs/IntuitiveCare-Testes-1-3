@@ -1,5 +1,6 @@
 .idea/
 anexos/
+static/
 Teste_{MariaLuisaBCSilva}.csv
 # Byte-compiled / optimized / DLL files
 __pycache__/
