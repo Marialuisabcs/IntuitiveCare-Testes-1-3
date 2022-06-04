@@ -8,7 +8,7 @@ problemas referentes os testes:
 - Teste 2 Transformação de dados 
 - Teste 3 - Banco de dados
 
-(O **Teste 4 - API** está hospedado nesse [repositório](link) )
+(O **Teste 4 - API** está hospedado nesse [repositório]([link](https://github.com/Marialuisabcs/IntuitiveCare-Teste-4.git)) )
 
 Todas as ações necessárias para que seja possível solucionar o que foi pedido em (Teste 1 e 2)
 está em app.py o resultado do Teste 3 está neste [aquivo](https://github.com/Marialuisabcs/IntuitiveCare-Testes-1-3/blob/main/Teste3_Banco_%7BMariaLuisaBCSilva%7D.sql).
