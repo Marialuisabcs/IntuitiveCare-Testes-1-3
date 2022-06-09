@@ -37,9 +37,9 @@ def data_scrapig():
     Instantiates data scraper object and retrieve structured data from pdf file
     """
     pdf_path = root_path / 'anexos' / 'Anexo_I_Rol_2021RN_465.2021_RN473_RN478_RN480_RN513_RN536.pdf'
-    csv_path = root_path / 'Teste_{MariaLuisaBCSilva}.csv'
-    zip_save_path_and_name = str(root_path / 'Teste_{MariaLuisaBCSilva}')
-    file_to_zip_path = 'Teste_{MariaLuisaBCSilva}.csv'
+    csv_path = root_path / 'Teste_MariaLuisaBCSilva.csv'
+    zip_save_path_and_name = str(root_path / 'Teste_MariaLuisaBCSilva')
+    file_to_zip_path = 'Teste_MariaLuisaBCSilva.csv'
 
     data_scpr = Data_Scraper(root_path, pdf_path, csv_path)
 
