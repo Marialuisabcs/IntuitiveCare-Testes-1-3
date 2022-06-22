@@ -17,7 +17,7 @@ está em app.py o resultado do Teste 3 está neste [aquivo](https://github.com/M
 Para executar o código siga os seguintes passos:
 
 **Obs:** Foi utilizada a linguagem Python em sua versão 3.9, portanto se faz
-necessário a instalação de um interpretador coerente. Ao executar localmente é indicado a utilização de um ambiente virtual para rodar o backend (mais informações em [Venv](https://docs.python.org/3/library/venv.html#:~:text=A%20virtual%20environment%20is%20a,part%20of%20your%20operating%20system.)).
+necessário a instalação de um interpretador coerente. Ao executar localmente é indicado a utilização de um ambiente virtual para rodar o script (mais informações em [Venv](https://docs.python.org/3/library/venv.html#:~:text=A%20virtual%20environment%20is%20a,part%20of%20your%20operating%20system.)).
 
 1. Clone o repositório - abra o terminal na pasta que desejar e execute o comando:
    ```
